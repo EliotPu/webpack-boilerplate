@@ -1,0 +1,22 @@
+﻿[*]
+insert_final_newline = true
+
+[*.{html, pug, js, mjs, cmj, jsx, ts, tsx, css, sass, scss, less, stylus, json}]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+curly_bracket_next_line = true
+spaces_around_operators = true
+max_line_length = 100
+# But we don't reformat minified JS and CSS files.
+[*.min.*]
+indent_style = ignore
+trim_trailing_whitespace = false
+insert_final_newline = ignore
+
+
+[*.{md,markdown,mdown,markdn}]
+indent_size = 2
+trim_trailing_whitespace = false
