@@ -67,7 +67,7 @@ See documentation and topics below:
 
 ## Author
 
-**EliotPu <purouskieliot@gmail.com>**
+**Eliot Purouski <purouskieliot@gmail.com>**
 
 * [<img alt="GitHub" width="18px" src="https://raw.githubusercontent.com/EliotPu/webpack-boilerplate/main/tech-stack/github-logo.png" /> GitHub](https://github.com/EliotPu)
 * [<img alt="Linkedin" width="18px" src="https://raw.githubusercontent.com/EliotPu/webpack-boilerplate/main/tech-stack/linkedin-logo.png" /> Linkedin](https://www.linkedin.com/in/elliotmrr/)
