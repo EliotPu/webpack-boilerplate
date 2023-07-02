@@ -5,6 +5,8 @@
   "browser": "./src/index.mjs",
   "type": "module",
   "scripts": {
+    "lint": "eslint . --ext js,mjs,cjs",
+    "lint:fix": "eslint . --fix --ext js,mjs,cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -86,5 +88,8 @@
   "engines": {
     "node": ">=16.13.1",
     "npm": ">=7.10.0"
+  },
+  "devDependencies": {
+    "eslint-config-el": "^1.1.1"
   }
 }
