@@ -2,6 +2,7 @@
 console.log('webpack-common-js');
 
 const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   target: 'browserslist',
@@ -50,6 +51,12 @@ const config = {
       templateLiteral: true,
     },
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: resolve(__dirname, '../src/index.html'),
+    }),
+  ],
 
   watchOptions: {
     aggregateTimeout: 600,
