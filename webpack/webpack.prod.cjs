@@ -2,6 +2,7 @@
 console.log('webpack-prod-js');
 
 const TerserPlugin = require('terser-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = {
   mode: 'production',
@@ -21,6 +22,13 @@ const config = {
       }),
     ],
   },
+
+  plugins: [
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+      analyzerMode: 'static',
+    }),
+  ],
 };
 
 module.exports = () => config;
