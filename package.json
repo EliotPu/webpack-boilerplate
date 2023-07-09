@@ -105,6 +105,7 @@
     "eslint-config-el": "^1.1.1",
     "html-webpack-plugin": "^5.5.3",
     "static-server": "^2.2.1",
+    "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
