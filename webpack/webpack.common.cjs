@@ -68,6 +68,17 @@ const config = {
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '../src/index.html'),
     }),
+    new ESLintPlugin({
+      fix: true,
+      useEslintrc: true,
+      exclude: ['/node_modules/'],
+      extensions: [
+        'mjs',
+        'cjs',
+        'js',
+        '...',
+      ],
+    }),
   ],
 
   module: {
