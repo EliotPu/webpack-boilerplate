@@ -5,6 +5,7 @@
   "browser": "./src/index.mjs",
   "type": "module",
   "scripts": {
+    "static-server": "static-server ./dist",
     "lint": "eslint . --ext js,mjs,cjs",
     "lint:fix": "eslint . --fix --ext js,mjs,cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -92,6 +93,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "eslint-config-el": "^1.1.1",
+    "static-server": "^2.2.1",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
