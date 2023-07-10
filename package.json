@@ -17,6 +17,7 @@
     "static-server": "static-server ./dist",
     "lint": "eslint . --ext js,mjs,cjs",
     "lint:fix": "eslint . --fix --ext js,mjs,cjs",
+    "clean": "rimraf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -104,6 +105,7 @@
     "dotenv": "^16.3.1",
     "eslint-config-el": "^1.1.1",
     "html-webpack-plugin": "^5.5.3",
+    "rimraf": "^5.0.1",
     "static-server": "^2.2.1",
     "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.88.1",
