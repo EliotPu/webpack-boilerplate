@@ -1,7 +1,10 @@
 // @ts-check
 console.log('webpack-common-js');
 
+require('dotenv/config');
+
 const { resolve } = require('path');
+const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -53,6 +56,12 @@ const config = {
   },
 
   plugins: [
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.NODE_BUILD': JSON.stringify(process.env.NODE_BUILD),
+      'process.env.IMGUR_CLIENT_ID': JSON.stringify(process.env.IMGUR_CLIENT_ID),
+      'process.env.BACKEND_URL': JSON.stringify(process.env.BACKEND_URL),
+    }),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '../src/index.html'),
     }),
