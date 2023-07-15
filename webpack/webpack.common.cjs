@@ -100,6 +100,10 @@ const config = {
         type: 'asset/resource',
       },
       ...svgRules,
+      {
+        resourceQuery: /raw/,
+        type: 'asset/source',
+      },
     ],
   },
 
