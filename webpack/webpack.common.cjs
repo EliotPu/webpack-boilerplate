@@ -11,6 +11,8 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const jsLoaders = require('./loaders/js-loaders.cjs');
 const cssLoaders = require('./loaders/css-loaders.cjs');
 
+const svgRules = require('./rules/svg.cjs');
+
 const config = {
   target: 'browserslist',
   entry: {
@@ -97,6 +99,7 @@ const config = {
         test: /\.(png|jpe?g|gif|webp)$/i,
         type: 'asset/resource',
       },
+      ...svgRules,
     ],
   },
 
@@ -175,6 +178,7 @@ const config = {
       'jpeg',
       'gif',
       'webp',
+      'svg',
       '...',
     ],
 
