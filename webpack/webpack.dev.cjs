@@ -2,6 +2,7 @@
 console.log('webpack-dev-js');
 
 const { resolve } = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   mode: 'development',
@@ -50,6 +51,13 @@ const config = {
       },
     },
   },
+
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[fullhash:8].bundle.css',
+      chunkFilename: '[name].[chunkhash:8].css',
+    }),
+  ],
 };
 
 module.exports = () => config;

@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const jsLoaders = require('./loaders/js-loaders.cjs');
+const cssLoaders = require('./loaders/css-loaders.cjs');
 
 const config = {
   target: 'browserslist',
@@ -88,6 +89,10 @@ const config = {
         exclude: [/(node_modules)/],
         use: jsLoaders,
       },
+      {
+        test: /\.css$/i,
+        use: cssLoaders,
+      },
     ],
   },
 
@@ -160,6 +165,7 @@ const config = {
       '.js',
       '.json',
       '.wasm',
+      '.css',
       '...',
     ],
 
