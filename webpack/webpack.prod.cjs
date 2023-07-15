@@ -5,6 +5,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
+const imageMinimizerWebpackPluginConfig = require('./configs/image-minimizer-webpack-plugin.config.cjs');
 
 const config = {
   mode: 'production',
@@ -38,6 +41,11 @@ const config = {
           },
         },
       }),
+
+      /**
+       *  imagemin plugins for lossless optimization
+       */
+      new ImageMinimizerPlugin(imageMinimizerWebpackPluginConfig),
     ],
   },
 
