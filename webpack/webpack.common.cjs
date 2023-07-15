@@ -104,6 +104,10 @@ const config = {
         resourceQuery: /raw/,
         type: 'asset/source',
       },
+      {
+        test: /\.txt$/,
+        type: 'asset/source',
+      },
     ],
   },
 
