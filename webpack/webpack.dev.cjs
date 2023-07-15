@@ -11,6 +11,7 @@ const config = {
   output: {
     filename: '[name].[fullhash:8].bundle.mjs',
     chunkFilename: '[name].[chunkhash:8].mjs',
+    assetModuleFilename: 'assets/images/[name].[contenthash:8][ext]',
   },
 
   devServer: {

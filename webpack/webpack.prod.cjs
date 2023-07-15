@@ -12,6 +12,7 @@ const config = {
   output: {
     filename: '[name].[contenthash].bundle.mjs',
     chunkFilename: '[name].[contenthash].mjs',
+    assetModuleFilename: 'assets/img/[contenthash][ext]',
   },
 
   optimization: {

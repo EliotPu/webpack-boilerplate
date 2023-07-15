@@ -93,6 +93,10 @@ const config = {
         test: /\.css$/i,
         use: cssLoaders,
       },
+      {
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 
@@ -166,6 +170,11 @@ const config = {
       '.json',
       '.wasm',
       '.css',
+      '.png',
+      'jpg',
+      'jpeg',
+      'gif',
+      'webp',
       '...',
     ],
 
