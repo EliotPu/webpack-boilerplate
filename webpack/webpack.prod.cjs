@@ -6,6 +6,9 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+
+const sitemapPaths = require('../sitemap-paths.cjs');
 
 const imageMinimizerWebpackPluginConfig = require('./configs/image-minimizer-webpack-plugin.config.cjs');
 
@@ -57,6 +60,15 @@ const config = {
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
       analyzerMode: 'static',
+    }),
+
+    /* https://www.npmjs.com/package/sitemap-webpack-plugin */
+    new SitemapPlugin({
+      base: 'http://localhost:9080',
+      paths: sitemapPaths,
+      options: {
+        // filename: 'map.xml',
+      },
     }),
   ],
 };
