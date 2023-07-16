@@ -1,0 +1,4 @@
+.submitButton {
+  composes: baseButton from "./base_button.css";
+  background-color: #d74444;
+}

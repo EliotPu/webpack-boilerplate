@@ -1,0 +1,16 @@
+/**
+ * Common block style
+ */
+
+@value colors: "@cssVars/colors.css";
+@value v-blue, v-red, v-green from colors;
+
+html {
+  font-family: 'Roboto';
+}
+
+body {
+  background-color: #b96f6f;
+  user-select: none;
+  color: v-blue;
+}

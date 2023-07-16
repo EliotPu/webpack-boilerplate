@@ -18,7 +18,7 @@ module.exports = [
     },
     parser: {
       dataUrlCondition: {
-        maxSize: 8 * 1024, // 8kb
+        maxSize: 0.4 * 1024, // 8kb
       },
     },
   },
