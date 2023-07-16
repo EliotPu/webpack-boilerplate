@@ -12,6 +12,7 @@ const jsLoaders = require('./loaders/js-loaders.cjs');
 const cssLoaders = require('./loaders/css-loaders.cjs');
 
 const svgRules = require('./rules/svg.cjs');
+const fontRules = require('./rules/font.cjs');
 
 const config = {
   target: 'browserslist',
@@ -108,6 +109,7 @@ const config = {
         test: /\.txt$/,
         type: 'asset/source',
       },
+      ...fontRules,
     ],
   },
 
