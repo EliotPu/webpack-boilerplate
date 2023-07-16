@@ -7,6 +7,7 @@ const { resolve } = require('path');
 const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const jsLoaders = require('./loaders/js-loaders.cjs');
 const cssLoaders = require('./loaders/css-loaders.cjs');
@@ -14,6 +15,8 @@ const mdLoaders = require('./loaders/md-loader.cjs');
 
 const svgRules = require('./rules/svg.cjs');
 const fontRules = require('./rules/font.cjs');
+
+const faviconsConfig = require('../favicons.config.cjs');
 
 const config = {
   target: 'browserslist',
@@ -64,6 +67,10 @@ const config = {
   },
 
   plugins: [
+    /**
+     * https://github.com/jantimon/favicons-webpack-plugin
+     */
+    new FaviconsWebpackPlugin(faviconsConfig),
     new DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       'process.env.NODE_BUILD': JSON.stringify(process.env.NODE_BUILD),
