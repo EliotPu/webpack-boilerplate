@@ -8,6 +8,7 @@ const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const jsLoaders = require('./loaders/js-loaders.cjs');
 const cssLoaders = require('./loaders/css-loaders.cjs');
@@ -89,6 +90,15 @@ const config = {
         'cjs',
         'js',
         '...',
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: resolve(__dirname, '../src/static'),
+          to: '[name][ext]',
+          noErrorOnMissing: true,
+        },
       ],
     }),
   ],
