@@ -2,6 +2,7 @@
   "root": true,
   "extends": "el",
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   }
 }
