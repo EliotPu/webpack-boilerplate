@@ -8,3 +8,6 @@ declare module '*.jpeg';
 declare module '*.gif';
 declare module '*.svg';
 declare module '*.svg?raw';
+
+/* markdown */
+declare module '*.md';

@@ -10,6 +10,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 const jsLoaders = require('./loaders/js-loaders.cjs');
 const cssLoaders = require('./loaders/css-loaders.cjs');
+const mdLoaders = require('./loaders/md-loader.cjs');
 
 const svgRules = require('./rules/svg.cjs');
 const fontRules = require('./rules/font.cjs');
@@ -110,6 +111,10 @@ const config = {
         type: 'asset/source',
       },
       ...fontRules,
+      {
+        test: /\.md$/,
+        use: mdLoaders,
+      },
     ],
   },
 
@@ -189,6 +194,7 @@ const config = {
       'gif',
       'webp',
       'svg',
+      'md',
       '...',
     ],
 
