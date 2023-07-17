@@ -1,6 +1,6 @@
 {
   "name": "webpack-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A webpack 5 boilerplate for building web apps (SPA/MPA) with Babel, CSS Modules",
   "browser": "./src/index.mjs",
   "type": "module",
